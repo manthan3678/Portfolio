@@ -11,6 +11,27 @@ import MyImage from "../assets/heroimage.png";
 import ImageWithFallback from "./figma/ImageWithFallback";
 
 export default function Hero() {
+  const socialLinks = [
+    {
+      icon: Github,
+      url: "https://github.com/manthan3678",
+      color: "hover:text-purple-400",
+      label: "GitHub Profile",
+    },
+    {
+      icon: Linkedin,
+      url: "https://www.linkedin.com/in/manthan-gedam/",
+      color: "hover:text-cyan-400",
+      label: "LinkedIn Profile",
+    },
+    {
+      icon: Mail,
+      url: "manthangedam198@gmail.com",
+      color: "hover:text-indigo-400",
+      label: "Send Email",
+    },
+  ];
+
   return (
     <section
       id="hero"
@@ -51,7 +72,8 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="mb-6 text-slate-300"
             >
-              Full Stack MERN Developer | Frontend Specialist
+              {/* Full Stack MERN Developer | Frontend Specialist */}
+              Full Stack MERN Developer
             </motion.h2>
 
             <motion.p
@@ -100,22 +122,19 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
               className="flex gap-4"
             >
-              {[
-                { icon: Github, color: "hover:text-purple-400" },
-                { icon: Linkedin, color: "hover:text-cyan-400" },
-                { icon: Mail, color: "hover:text-indigo-400" },
-              ].map((social, index) => (
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  href="#"
+                  href={social.url}
                   className={`w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-slate-400 ${social.color} transition-all`}
                 >
                   <social.icon size={20} />
                 </motion.a>
               ))}
             </motion.div>
+            {/* Social Links */}
           </motion.div>
 
           {/* Right Content */}
