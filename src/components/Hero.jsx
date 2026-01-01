@@ -95,16 +95,17 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4 mb-8"
             >
-              <motion.button
+              <motion.a
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
                 }}
+                href="https://www.linkedin.com/in/manthan-gedam/"
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-full text-white flex items-center gap-2 shadow-lg shadow-cyan-500/50"
               >
                 Hire Me <ArrowRight size={20} />
-              </motion.button>
+              </motion.a>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -114,7 +115,7 @@ export default function Hero() {
                 <Download size={20} /> Download Resume
               </motion.button>
             </motion.div>
-
+            {/* CTA Buttons END */}
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

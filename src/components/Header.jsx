@@ -15,7 +15,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = ["About", "Skills", "Projects", "Experience", "Education", "Contact"];
+  const navItems = [
+    "About",
+    "Skills",
+    "Projects",
+    "Experience",
+    "Education",
+    "Contact",
+  ];
 
   const scrollToSection = (section) => {
     const element = document.getElementById(section.toLowerCase());
@@ -55,19 +62,20 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => scrollToSection(item)}
-                className="text-slate-200 hover:text-cyan-400 transition-colors relative group"
+                className="text-slate-200 cursor-pointer hover:text-cyan-400 transition-colors relative group"
               >
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </motion.button>
             ))}
-            <motion.button
+            <motion.a
+              href="https://www.linkedin.com/in/manthan-gedam/"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full text-white shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all"
             >
               Hire Me
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
