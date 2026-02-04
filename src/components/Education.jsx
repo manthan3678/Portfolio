@@ -11,13 +11,13 @@ export default function Education() {
   const education = {
     degree: "Bachelor of Technology",
     major: "Computer Science Engineering",
-    year: "2021 - 2025 (4th Year)",
-    university: "Leading University, India",
+    year: "2021 - 2025 (Passed with First Division)",
+    university: "RTMNU, Maharashtra, India",
     achievements: [
-      "Maintaining strong academic performance",
-      "Active participant in coding competitions",
-      "Member of technical clubs and societies",
+      "Maintained strong academic performance throughout the program",
       "Worked on multiple academic and personal projects",
+      "Gained practical experience in full-stack and frontend web development",
+      "Contributed as a member of the college football team",
     ],
   };
 
@@ -34,7 +34,7 @@ export default function Education() {
     },
     {
       name: "Node.js & MongoDB",
-      issuer: "Course Provider",
+      issuer: "Infosys Springboard",
       icon: Trophy,
     },
   ];
@@ -181,11 +181,13 @@ export default function Education() {
 
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { year: "2021", milestone: "Started Web Development" },
-                { year: "2022", milestone: "Mastered MERN Stack" },
-                { year: "2023", milestone: "Professional Experience" },
-                { year: "2024", milestone: "Advanced UI/UX & Animations" },
-                { year: "2025", milestone: "Ready for Industry" },
+                { year: "2023", milestone: "Started Web Development" },
+                { year: "2024", milestone: "Started MERN Stack Development" },
+                { year: "2025", milestone: "Built Multiple Personal Projects" },
+                {
+                  year: "2025–2026",
+                  milestone: "Working as Frontend Developer (Shopify)",
+                },
               ].map((item, index) => (
                 <motion.div
                   key={index}

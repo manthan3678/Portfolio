@@ -11,31 +11,32 @@ export default function Experience() {
     {
       role: "Frontend Developer",
       company: "VowelWeb",
-      period: "2023 - Present",
-      location: "Remote",
+      period: "2025 - Present",
+      location: "On - Site",
       description:
-        "Developing modern, responsive web applications using React and cutting-edge frontend technologies. Collaborating with cross-functional teams to deliver high-quality user experiences.",
+        "Developing and maintaining client websites on Shopify using HTML, CSS, JavaScript, and Shopify Liquid. Building custom, reusable sections and components, and contributing to an in-house section builder application to create flexible, scalable storefront solutions.",
       highlights: [
-        "Built and maintained 15+ responsive web applications",
-        "Improved application performance by 40% through optimization",
-        "Implemented modern UI/UX designs with smooth animations",
-        "Collaborated with design and backend teams for seamless integration",
+        "Built custom, reusable Shopify sections and components for scalable storefront development",
+        "Contributed to an in-house section builder application to enable flexible page creation",
+        "Implemented responsive layouts and ensured cross-browser compatibility across devices",
       ],
       color: "from-cyan-500 to-indigo-600",
     },
     {
       role: "MERN Stack Developer",
-      company: "Freelance Projects",
-      period: "2022 - 2023",
-      location: "Remote",
+      company: "Edumix Technology",
+      period: "2024 - 2025",
+      location: "On - Site",
       description:
-        "Worked on various full-stack projects, building end-to-end web applications with modern tech stack. Delivered scalable solutions for clients across different industries.",
+        "Worked as a MERN Stack Developer on full-stack projects, gaining hands-on experience in building end-to-end web applications and understanding complete application architecture from frontend to backend.",
+
       highlights: [
-        "Developed 10+ full-stack web applications",
-        "Integrated RESTful APIs and third-party services",
-        "Implemented secure authentication and authorization systems",
-        "Provided ongoing maintenance and feature enhancements",
+        "Built full-stack web applications using MongoDB, Express.js, React, and Node.js",
+        "Integrated RESTful APIs and third-party services for dynamic data handling",
+        "Implemented authentication and authorization using JWT and role-based access control",
+        "Learned and applied best practices for structuring scalable and maintainable applications",
       ],
+
       color: "from-purple-500 to-pink-600",
     },
   ];
@@ -169,8 +170,10 @@ export default function Experience() {
             <h3 className="mb-2 text-slate-200">Open to New Opportunities</h3>
 
             <p className="text-slate-400 max-w-2xl mx-auto mb-6">
-              I'm actively looking for exciting full-stack development roles
-              where I can contribute my skills and continue growing as a
+              I'm actively looking for exciting{" "}
+              <span className="text-cyan-400">Frontend Development</span> and{" "}
+              <span className="text-purple-400">Full Stack Development</span>{" "}
+              roles where I can contribute my skills and continue growing as a
               developer.
             </p>
 
