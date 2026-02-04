@@ -1,7 +1,7 @@
-import { motion } from 'motion/react';
-import { useRef } from 'react';
-import useInView from '../hooks/useInView';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { motion } from "motion/react";
+import { useRef } from "react";
+import useInView from "../hooks/useInView";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 export default function Experience() {
   const ref = useRef(null);
@@ -19,9 +19,9 @@ export default function Experience() {
         "Built and maintained 15+ responsive web applications",
         "Improved application performance by 40% through optimization",
         "Implemented modern UI/UX designs with smooth animations",
-        "Collaborated with design and backend teams for seamless integration"
+        "Collaborated with design and backend teams for seamless integration",
       ],
-      color: "from-cyan-500 to-indigo-600"
+      color: "from-cyan-500 to-indigo-600",
     },
     {
       role: "MERN Stack Developer",
@@ -34,16 +34,15 @@ export default function Experience() {
         "Developed 10+ full-stack web applications",
         "Integrated RESTful APIs and third-party services",
         "Implemented secure authentication and authorization systems",
-        "Provided ongoing maintenance and feature enhancements"
+        "Provided ongoing maintenance and feature enhancements",
       ],
-      color: "from-purple-500 to-pink-600"
-    }
+      color: "from-purple-500 to-pink-600",
+    },
   ];
 
   return (
     <section id="experience" className="py-20 px-6 bg-slate-900/30" ref={ref}>
       <div className="container mx-auto">
-
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -61,10 +60,8 @@ export default function Experience() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-
           {/* Timeline */}
           <div className="relative">
-
             {/* Center Vertical Line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-indigo-600 transform -translate-x-1/2"></div>
 
@@ -79,12 +76,9 @@ export default function Experience() {
                 }
                 transition={{ duration: 0.6, delay: index * 0.3 }}
                 className={`relative mb-12 md:mb-20 ${
-                  index % 2 === 0
-                    ? "md:mr-auto md:pr-8"
-                    : "md:ml-auto md:pl-8"
+                  index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
                 } md:w-1/2`}
               >
-
                 {/* Timeline Dot */}
                 <div className="hidden md:block absolute top-8 right-0 md:right-auto md:left-full w-6 h-6 transform md:-translate-x-1/2">
                   <div
@@ -99,7 +93,6 @@ export default function Experience() {
                   whileHover={{ scale: 1.02 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-6 md:p-8 hover:border-cyan-500/50 transition-all"
                 >
-
                   {/* Header */}
                   <div className="flex items-start gap-4 mb-4">
                     <div
@@ -140,11 +133,13 @@ export default function Experience() {
                           key={hIndex}
                           initial={{ opacity: 0, x: -10 }}
                           animate={
-                            isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }
+                            isInView
+                              ? { opacity: 1, x: 0 }
+                              : { opacity: 0, x: -10 }
                           }
                           transition={{
                             duration: 0.4,
-                            delay: index * 0.3 + hIndex * 0.1
+                            delay: index * 0.3 + hIndex * 0.1,
                           }}
                           className="flex items-start gap-2 text-slate-400 text-sm"
                         >
@@ -174,7 +169,9 @@ export default function Experience() {
             <h3 className="mb-2 text-slate-200">Open to New Opportunities</h3>
 
             <p className="text-slate-400 max-w-2xl mx-auto mb-6">
-              I'm actively looking for exciting full-stack development roles where I can contribute my skills and continue growing as a developer.
+              I'm actively looking for exciting full-stack development roles
+              where I can contribute my skills and continue growing as a
+              developer.
             </p>
 
             <motion.button

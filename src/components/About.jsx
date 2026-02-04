@@ -1,7 +1,7 @@
-import { useRef } from 'react';
-import { motion } from 'motion/react';
-import { Sparkles, Target, Heart } from 'lucide-react';
-import useInView from '../hooks/useInView'; // Make sure your hook exports default OR adjust import
+import { useRef } from "react";
+import { motion } from "motion/react";
+import { Sparkles, Target, Heart } from "lucide-react";
+import useInView from "../hooks/useInView"; // Make sure your hook exports default OR adjust import
 
 export default function About() {
   const ref = useRef(null);
@@ -11,24 +11,23 @@ export default function About() {
     {
       icon: Sparkles,
       title: "Creative Problem Solver",
-      description: "Love tackling complex challenges with elegant solutions"
+      description: "Love tackling complex challenges with elegant solutions",
     },
     {
       icon: Target,
       title: "Detail Oriented",
-      description: "Focused on pixel-perfect implementations and clean code"
+      description: "Focused on pixel-perfect implementations and clean code",
     },
     {
       icon: Heart,
       title: "Passionate Learner",
-      description: "Constantly exploring new technologies and best practices"
-    }
+      description: "Constantly exploring new technologies and best practices",
+    },
   ];
 
   return (
     <section id="about" className="py-20 px-6" ref={ref}>
       <div className="container mx-auto">
-        
         {/* Heading Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -46,7 +45,6 @@ export default function About() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
           {/* Left Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -59,31 +57,54 @@ export default function About() {
                 Hello! I'm Manthan Gedam 👋
               </h3>
               <p className="text-slate-400 mb-4">
-                I'm currently in my 4th year pursuing <span className="text-cyan-400">B.Tech in Computer Science Engineering</span>.
-                As a Full Stack MERN Developer, I specialize in building modern, scalable web applications that solve real-world problems.
+                I'm a{" "}
+                <span className="text-cyan-400">
+                  B.Tech graduate in Computer Science Engineering
+                </span>
+                . As a MERN Stack Developer, I have experience building modern,
+                scalable web applications and working across both frontend and
+                backend technologies.
               </p>
+
               <p className="text-slate-400 mb-4">
-                My journey in web development started with a curiosity about how websites work, and it has evolved into a 
-                passion for creating beautiful, functional applications. I'm particularly interested in <span className="text-purple-400">modern UI/UX design</span> and 
-                <span className="text-cyan-400"> smooth animations</span> that enhance user experience.
+                My journey in web development started with a curiosity about how
+                websites work, which gradually turned into a strong passion for
+                crafting clean, high-performing interfaces. I’m especially
+                focused on{" "}
+                <span className="text-purple-400">modern UI/UX design</span> and
+                <span className="text-cyan-400">
+                  {" "}
+                  smooth, interactive animations
+                </span>{" "}
+                that elevate the overall user experience.
               </p>
+
               <p className="text-slate-400">
-                Currently working as a <span className="text-indigo-400">Frontend Developer at VowelWeb</span>, where I collaborate with 
-                teams to build innovative solutions and continuously improve my skills.
+                Currently working as a{" "}
+                <span className="text-indigo-400">
+                  Frontend Developer (Shopify) at VowelWeb
+                </span>
+                , where I build and customize Shopify storefronts, develop
+                reusable components, and collaborate closely with teams to
+                deliver visually engaging and responsive e-commerce solutions.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               {[
-                { value: '20+', label: 'Projects' },
-                { value: '2+', label: 'Years Exp' },
-                { value: '15+', label: 'Technologies' }
+                { value: "20+", label: "Projects" },
+                { value: "2+", label: "Years Exp" },
+                { value: "15+", label: "Technologies" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, scale: 1 }
+                      : { opacity: 0, scale: 0.8 }
+                  }
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                   className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
                 >
@@ -107,7 +128,9 @@ export default function About() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.15 }}
                 whileHover={{ scale: 1.03, x: 10 }}
                 className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all"
@@ -127,7 +150,9 @@ export default function About() {
             {/* Fun Fact */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              animate={
+                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+              }
               transition={{ duration: 0.5, delay: 0.8 }}
               className="bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-lg border border-purple-500/30 rounded-2xl p-6"
             >
@@ -136,12 +161,12 @@ export default function About() {
                 <h4 className="text-slate-200">Fun Fact</h4>
               </div>
               <p className="text-slate-300">
-                When I'm not coding, you'll find me exploring the latest design trends, 
-                watching tech videos, or experimenting with new frameworks!
+                When I'm not coding, you'll find me exploring the latest design
+                trends, watching tech videos, or experimenting with new
+                frameworks!
               </p>
             </motion.div>
           </motion.div>
-
         </div>
       </div>
     </section>
