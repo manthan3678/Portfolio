@@ -39,8 +39,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "manthan.gedam@example.com",
-      href: "mailto:manthan.gedam@example.com",
+      value: "manthangedam@expamle.com",
+      href: "mailto:manthangedam@example.com",
       color: "from-cyan-500 to-blue-500",
     },
     {
@@ -53,21 +53,33 @@ export default function Contact() {
     {
       icon: MapPin,
       label: "Location",
-      value: "India",
+      value: "Maharashtra, India",
       href: "#",
       color: "from-indigo-500 to-purple-500",
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", color: "hover:text-purple-400" },
-    { icon: Linkedin, href: "#", color: "hover:text-cyan-400" },
+    {
+      icon: Github,
+      href: "https://github.com/manthan3678",
+      color: "hover:text-purple-400",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/manthan-gedam/",
+      color: "hover:text-cyan-400",
+    },
     { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-    { icon: Mail, href: "#", color: "hover:text-pink-400" },
+    {
+      icon: Mail,
+      href: "manthangedam198@gmail.com",
+      color: "hover:text-pink-400",
+    },
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-slate-900/30" ref={ref}>
+    <section id="contact" className="py-20 px-3 bg-slate-900/30" ref={ref}>
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -88,8 +100,8 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-5 gap-8">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 sm:gap-6 lg:gap-8">
             {/* LEFT SIDE CONTACT INFO */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -98,8 +110,10 @@ export default function Contact() {
               className="lg:col-span-2 space-y-6"
             >
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8">
-                <h3 className="mb-6 text-slate-200">Let's Connect</h3>
-                <p className="text-slate-400 mb-8">
+                <h3 className="mb-4 sm:mb-6 text-slate-200 text-lg sm:text-xl">
+                  Let's Connect
+                </h3>
+                <p className="text-slate-400 mb-6 text-sm sm:text-base">
                   I'm currently available for freelance work and full-time
                   opportunities. If you have a project that you want to get
                   started or think you need my help, then get in touch.
@@ -114,20 +128,22 @@ export default function Contact() {
                       animate={
                         isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
                       }
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                      transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                       whileHover={{ scale: 1.03, x: 5 }}
-                      className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl hover:border-cyan-500/50 transition-all group"
+                      className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/5 border border-white/10 rounded-2xl hover:border-cyan-500/50 transition-all group"
                     >
                       <div
-                        className={`w-12 h-12 bg-gradient-to-r ${info.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}
+                        className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${info.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}
                       >
-                        <info.icon className="text-white" size={20} />
+                        <info.icon className="text-white" size={18} />
                       </div>
-                      <div>
-                        <div className="text-slate-400 text-sm">
+                      <div className="min-w-0">
+                        <div className="text-slate-400 text-xs sm:text-sm">
                           {info.label}
                         </div>
-                        <div className="text-slate-200">{info.value}</div>
+                        <div className="text-slate-200 text-sm break-all">
+                          {info.value}
+                        </div>
                       </div>
                     </motion.a>
                   ))}
@@ -146,10 +162,10 @@ export default function Contact() {
                             ? { opacity: 1, scale: 1 }
                             : { opacity: 0, scale: 0.8 }
                         }
-                        transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+                        transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
                         whileHover={{ scale: 1.2, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
-                        className={`w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-slate-400 ${social.color} transition-all`}
+                        className={`w-10 h-10 sm:w-12 sm:h-12  flex items-center justify-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-slate-400 ${social.color} transition-all`}
                       >
                         <social.icon size={20} />
                       </motion.a>
@@ -168,7 +184,7 @@ export default function Contact() {
             >
               <form
                 onSubmit={handleSubmit}
-                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8"
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-5 sm:p-6 md:p-8"
               >
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -181,7 +197,9 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3
+                      text-sm sm:text-base
+                      bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
                       placeholder="John Doe"
                       required
                     />
@@ -200,7 +218,8 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3
+                      text-sm sm:text-base bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
                       placeholder="john@example.com"
                       required
                     />
@@ -220,7 +239,8 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3
+                      text-sm sm:text-base bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
                     placeholder="Project Inquiry"
                     required
                   />
@@ -239,7 +259,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows="6"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3
+                      text-sm sm:text-base bg-white/5 border border-white/10 rounded-xl text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none"
                     placeholder="Tell me about your project..."
                     required
                   />
@@ -249,7 +270,7 @@ export default function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-xl text-white flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all"
+                  className="w-full px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-xl text-white flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all"
                 >
                   Send Message
                   <Send size={20} />

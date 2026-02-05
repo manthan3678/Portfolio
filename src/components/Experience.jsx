@@ -9,7 +9,7 @@ export default function Experience() {
 
   const experiences = [
     {
-      role: "Frontend Developer",
+      role: "Shopify Frontend Developer",
       company: "VowelWeb",
       period: "2025 - Present",
       location: "On - Site",
